@@ -178,7 +178,10 @@ export default function Home() {
       <div className="mr-10 ml-10 ">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mt-4">
           {nftNames.map((nft, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-md p-4">
+            <div
+              key={index}
+              className="bg-white rounded-lg shadow-md p-4 hover:-translate-y-2 transition duration-300 ease-in-out hover:shadow-inner"
+            >
               <div className="flex justify-center">
                 <Image
                   src={`https://ipfs.infura.io/ipfs/${
