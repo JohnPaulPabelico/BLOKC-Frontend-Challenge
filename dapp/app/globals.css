@@ -17,17 +17,18 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* Create custom scrollbar appearance */
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar width */
+  height: 0; /* Remove scrollbar height */
+}
+
+/* Apply custom scrollbar appearance to scrollbar track and thumb */
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb {
+  visibility: hidden; /* Hide scrollbar track and thumb */
 }
